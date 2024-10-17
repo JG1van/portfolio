@@ -743,7 +743,7 @@ footer {
 .tutorial-table {
   margin: 0 30px;
   padding: 90px 0;
-
+  overflow-x: auto;
 }
 
 .tutorial-table table {
@@ -751,7 +751,6 @@ footer {
   border-collapse: collapse;
   color: var(--warna-2);
   text-align: center;
-
 }
 
 .tutorial-table h2 {
@@ -769,7 +768,6 @@ footer {
   border: 1px solid white;
   padding: 8px;
   text-align: center;
-  /* Ubah menjadi center */
 }
 
 .tutorial-table table th {
@@ -779,6 +777,39 @@ footer {
 .tutorial-table table td {
   background-color: var(--warna-4);
 }
+
+@media (max-width: 768px) {
+  .tutorial-table table {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .tutorial-table h2 {
+    font-size: 32px;
+  }
+
+  .tutorial-table table th,
+  .tutorial-table table td {
+    padding: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tutorial-table h2 {
+    font-size: 24px;
+  }
+
+  .tutorial-table table {
+    font-size: 12px;
+  }
+
+  .tutorial-table table th,
+  .tutorial-table table td {
+    padding: 2px;
+
+  }
+}
+
 
 /* Pengaturan tampilan body agar form berada di tengah halaman */
 .form-login-register {
