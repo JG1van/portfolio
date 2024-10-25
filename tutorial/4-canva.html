@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Canvas</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+      /* Menambahkan flexbox untuk menyelaraskan input dan gambar */
+      .container {
+        padding: 20px 0;
+        margin: 20px 0;
+        display: flex;
+        align-items: center; /* Vertikal sejajar di tengah */
+        gap: 20px; /* Jarak antara elemen */
+        justify-content: center;
+        backdrop-filter: blur(25px) saturate(99%);
+        -webkit-backdrop-filter: blur(25px) saturate(99%);
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 12px;
+        color: var(--warna-2);
+      }
+
+      /* Style pada gambar dan input file */
+      #gambar {
+        border: 1px solid #d3d3d3;
+      }
+    </style>
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav id="header">
+      <div class="nav-logo">
+        <p class="nav-name">Jonathan G</p>
+        <span>.</span>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+          <li class="nav_list">
+            <a href="../index.html#home" class="nav-link">Home</a>
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="../index.html#about" class="nav-link">About</a>
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="../index.html#projects" class="nav-link">Projects</a>
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="../index.html#contact" class="nav-link">Contact</a>
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="../index.html#tutorial" class="nav-link active-link"
+              >Tutorial</a
+            >
+            <div class="circle"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-button">
+        <button class="btn">
+          Download CV <i class="uil uil-file-alt"></i>
+        </button>
+      </div>
+      <div class="nav-menu-btn">
+        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
+
+    <section>
+      <div class="container">
+        <!-- Kotak Input File dan Gambar Diletakkan dalam Satu Baris -->
+        <div style="padding: 90px 0">
+          <p>Pilih gambar dari perangkat Anda:</p>
+          <input type="file" id="fileInput" accept="image/*" />
+        </div>
+      </div>
+      <div class="container">
+        <img
+          id="gambar"
+          src="../assets/images/5zh1ey.jpg"
+          alt="Gambar tidak tersedia"
+          width="220"
+          height="277"
+        />
+
+        <p>Mengisi :</p>
+        <canvas
+          id="kanvas"
+          width="220"
+          height="277"
+          style="border: 1px solid #d3d3d3"
+        >
+          Your browser does not support the HTML5 canvas tag.</canvas
+        >
+        <div class="featured-text-btn">
+          <button class="btn blue-btn" onclick="kanvas()">Try</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const fileInput = document.getElementById("fileInput");
+      const gambar = document.getElementById("gambar");
+
+      fileInput.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          gambar.src = e.target.result;
+        };
+
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      });
+
+      function kanvas() {
+        var c = document.getElementById("kanvas");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("gambar");
+        ctx.drawImage(img, 0, 0, c.width, c.height);
+      }
+    </script>
+
+    <section>
+      <h5>Penjelasan Syntax Bagian canvas</h5>
+      <div class="tutorial-grid">
+        <!-- Penjelasan elemen gambar -->
+        <div class="tutorial-box">
+          <p>
+            <code
+              >&lt;img id="gambar" src="../assets/images/5zh1ey.jpg" alt=""
+              width="220" height="277" /&gt;</code
+            >
+            - Elemen ini digunakan untuk menampilkan gambar di halaman web.
+            Atribut
+            <code>src</code> menentukan sumber gambar,
+            <code>alt</code> memberikan deskripsi alternatif jika gambar tidak
+            dapat ditampilkan, dan <code>width</code> serta
+            <code>height</code> menetapkan ukuran gambar.
+          </p>
+        </div>
+
+        <!-- Penjelasan elemen kanvas -->
+        <div class="tutorial-box">
+          <p>
+            <code
+              >&lt;canvas id="kanvas" width="220" height="277" style="border:
+              1px solid #d3d3d3"&gt;&lt;/canvas&gt;</code
+            >
+            - Elemen kanvas ini berfungsi sebagai area di mana gambar atau
+            grafis dapat digambar menggunakan JavaScript. Atribut
+            <code>width</code> dan <code>height</code> menentukan dimensi
+            kanvas, sedangkan <code>style</code>
+            memberikan gaya border pada kanvas.
+          </p>
+        </div>
+
+        <!-- Penjelasan tombol untuk memanggil fungsi kanvas -->
+        <div class="tutorial-box">
+          <p>
+            <code>&lt;button onclick="kanvas()"&gt;Try&lt;/button&gt;</code>
+            - Tombol ini ketika diklik akan memanggil fungsi
+            <code>kanvas()</code>, yang bertugas untuk menggambar gambar pada
+            kanvas.
+          </p>
+        </div>
+
+        <!-- Penjelasan fungsi JavaScript kanvas -->
+        <div class="tutorial-box">
+          <p>
+            <code>function kanvas() { ... }</code>
+            - Fungsi ini digunakan untuk menggambar gambar pada kanvas. Di dalam
+            fungsi,
+            <code>getContext("2d")</code> digunakan untuk mendapatkan konteks 2D
+            kanvas, dan
+            <code>drawImage(img, 0, 0, c.width, c.height)</code> menggambar
+            gambar pada posisi (0, 0) di kanvas dengan ukuran yang ditentukan.
+          </p>
+        </div>
+
+        <!-- Penjelasan elemen input untuk memilih gambar -->
+        <div class="tutorial-box">
+          <p>
+            <code
+              >&lt;input type="file" id="fileInput" accept="image/*" /&gt;</code
+            >
+            - Elemen input ini memungkinkan pengguna untuk memilih file gambar
+            dari perangkat mereka. Atribut <code>type="file"</code> menunjukkan
+            bahwa elemen ini adalah untuk memilih file, dan
+            <code>accept="image/*"</code> membatasi file yang dapat dipilih
+            hanya pada gambar.
+          </p>
+        </div>
+
+        <!-- Penjelasan JavaScript untuk membaca file gambar -->
+        <div class="tutorial-box">
+          <p>
+            <code
+              >fileInput.addEventListener("change", (event) => { ... });</code
+            >
+            - JavaScript ini mendeteksi perubahan pada input file dan mengubah
+            gambar yang ditampilkan di elemen <code>&lt;img&gt;</code>. Fungsi
+            <code>FileReader</code> digunakan untuk membaca data gambar yang
+            dipilih dan <code>reader.onload</code>
+            mengubah sumber gambar agar sesuai dengan file yang baru saja
+            dipilih.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h5>Tampilan Syntax canvas</h5>
+      <div class="page-wrapper">
+        <div class="syntax-container">
+          <div class="syntax-box">
+            <code>
+              &lt;!DOCTYPE html&gt; <br />
+              &lt;html&gt; <br />
+              &nbsp;&nbsp;&lt;body&gt; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Pilih gambar dari perangkat
+              Anda:&lt;/p&gt; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;file&quot;
+              id=&quot;fileInput&quot; accept=&quot;image/*&quot; /&gt;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;img <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;gambar&quot; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src=&quot;&quot; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt=&quot;Gambar tidak
+              tersedia&quot; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width=&quot;220&quot; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height=&quot;277&quot; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&gt;&lt;/img&gt; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Mengisi :&lt;/p&gt; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;canvas <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;kanvas&quot; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width=&quot;220&quot; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height=&quot;277&quot; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style=&quot;border: 1px solid
+              #d3d3d3&quot;&gt; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your browser does not support
+              the HTML5 canvas tag.&lt;/canvas&gt; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;button
+              onclick=&quot;kanvas()&quot;&gt;Try&lt;/button&gt;&lt;/p&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fileInput =
+              document.getElementById(&quot;fileInput&quot;); <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var img =
+              document.getElementById(&quot;gambar&quot;); <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileInput.addEventListener(&quot;change&quot;,
+              function(event) { <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var reader = new
+              FileReader(); <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.onload =
+              function(e) { <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img.src
+              = e.target.result; <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.readAsDataURL(event.target.files[0]);
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}); <br /><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function kanvas() { <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var c =
+              document.getElementById(&quot;kanvas&quot;); <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var ctx =
+              c.getContext(&quot;2d&quot;); <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctx.clearRect(0,
+              0, c.width, c.height); <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctx.drawImage(img,
+              0, 0, c.width, c.height); <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+              &nbsp;&nbsp;&lt;/script&gt; <br />
+              &nbsp;&nbsp;&lt;/body&gt; <br />
+              &lt;/html&gt;
+            </code>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <!-- ----- TYPING JS Link ----- -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- ----- SCROLL REVEAL JS Link----- -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- ----- MAIN JS ----- -->
+  <script src="../assets/js/main.js"></script>
+</html>

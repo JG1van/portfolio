@@ -29,6 +29,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+
 }
 
 /* ----- SMOOTH SCROLL ----- */
@@ -84,11 +85,18 @@ i {
 
 /* ------- BASE -------- */
 body {
-  background-color: var(--warna-3);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(0,636,297)'%3E%3Cstop offset='0' stop-color='%23222831'/%3E%3Cstop offset='1' stop-color='%23222831'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='300' height='250' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.2'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
+  --s: 120px;
+  /* control the size*/
+
+  --_g: radial-gradient(#0000 70%, #222831 61%);
+  background:
+    var(--_g), var(--_g) calc(var(--s)/2) calc(var(--s)/2),
+    conic-gradient(#393E46 25%, #393E46 0 50%, #393E46 0 75%, #393E46 0);
+  background-size: var(--s) var(--s);
+
 }
+
+
 
 .container {
   width: 100%;
@@ -126,6 +134,7 @@ nav {
   right: -20px;
   font-size: 5em;
   color: var(--warna-5);
+
 }
 
 .nav-menu,
@@ -222,10 +231,12 @@ nav {
   font-size: 15px;
   margin-bottom: 30px;
   color: var(--warna-2);
-  background: var(--warna-4);
-  box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
-  border-radius: 20px;
-  padding: 5px;
+  padding: 10px;
+  backdrop-filter: blur(25px) saturate(99%);
+  -webkit-backdrop-filter: blur(25px) saturate(99%);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
 .featured-text-btn {
@@ -313,8 +324,9 @@ nav {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
 
-.scroll-btn i {
+.scroll-btn i p {
   font-size: 20px;
+  color: var(--warna-2);
 }
 
 /* ----- MAIN BOX ----- */
@@ -342,18 +354,25 @@ nav {
 
 .top-header h1 {
   font-weight: 600;
-  color: var(--warna-5);
+  color: var(--warna-2);
   margin-bottom: 10px;
 }
 
 .top-header span {
-  color: #999;
+  color: var(--warna-2);
 }
 
 h3 {
   font-size: 20px;
   font-weight: 600;
   color: var(--warna-5);
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--warna-2);
   margin-bottom: 15px;
 }
 
@@ -367,8 +386,12 @@ h3 {
   padding-inline: 20px;
   width: 100%;
   background: var(--warna-4);
-  box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+
+  backdrop-filter: blur(25px) saturate(99%);
+  -webkit-backdrop-filter: blur(25px) saturate(99%);
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 20px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
 
 }
 
@@ -395,6 +418,7 @@ h3 {
 /* ----- ABOUT / SKILLS BOX ----- */
 .skills-box {
   margin: 10px;
+
 }
 
 .skills-header {
@@ -432,24 +456,129 @@ h3 {
   flex-direction: column;
   width: 30%;
   height: 250px;
+  border-radius: 20px;
+  box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.project-box::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, #00ADB5, #00ADB5);
+  height: 150%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+  z-index: 0;
+  /* Pastikan ini berada di belakang konten utama */
+}
+
+.project-box::after {
+  content: '';
+  position: absolute;
+  background: var(--warna-2);
+  inset: 10px;
+  border-radius: 15px;
+  z-index: 1;
+  transition: background-color 0.4s ease;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.project-box i {
+  font-size: 50px;
+  color: var(--warna-5);
+  margin-bottom: 25px;
+  transition: color 0.4s ease;
+  z-index: 2;
+}
+
+.project-box h3 {
+  font-size: 20px;
+
+  color: var(--warna-5);
+  margin-bottom: 5px;
+  z-index: 2;
+  transition: color 0.4s ease;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.project-box label {
+  font-size: 15px;
+  color: #777;
+  z-index: 2;
+  transition: color 0.4s ease;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.project-box:hover {
+  box-shadow: 1px 8px 10px 2px var(--second-shadow-color);
+  z-index: 3;
+}
+
+.project-box:hover::after {
+  background-color: var(--warna-5);
+  inset: 0;
+  transform: scale(1.05);
+}
+
+.project-box:hover i,
+.project-box:hover h3,
+.project-box:hover label {
+  color: var(--warna-2);
+  /* Mengubah warna ikon, teks, dan label menjadi warna-2 */
+  z-index: 2;
+}
+
+
+
+/* ----- Tutorial ----- */
+.Tutorial-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.Tutorial-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  height: 250px;
   background: var(--warna-2);
   border-radius: 20px;
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   overflow: hidden;
 }
 
-.project-box>i {
+.Tutorial-box>i {
   font-size: 50px;
   color: #00b5e7;
   margin-bottom: 25px;
 }
 
-.project-box label {
+.Tutorial-box label {
   font-size: 15px;
   color: #777;
 }
 
-.project-box::after,
+.Tutorial-box::after,
 .contact-info::after {
   content: "";
   position: absolute;
@@ -461,14 +590,14 @@ h3 {
   z-index: 1;
 }
 
-.project-box:hover.project-box::after,
+.Tutorial-box:hover.Tutorial-box::after,
 .contact-info:hover.contact-info::after {
   bottom: 0;
 }
 
-.project-box:hover.project-box i,
-.project-box:hover.project-box>h3,
-.project-box:hover.project-box>label {
+.Tutorial-box:hover.Tutorial-box i,
+.Tutorial-box:hover.Tutorial-box>h3,
+.Tutorial-box:hover.Tutorial-box>label {
   color: var(--warna-2);
   z-index: 2;
 }
@@ -488,6 +617,7 @@ h3 {
   box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
   overflow: hidden;
 }
+
 
 .contact-info>h2 {
   color: var(--warna-2);
@@ -612,6 +742,78 @@ footer {
   margin-top: 10px;
 }
 
+section .bagian-tutorial {
+  margin: 0 50px;
+  overflow-x: auto;
+}
+
+section .bagian-tutorial h5 {
+  font-size: 50px;
+  color: var(--warna-2);
+  text-align: center;
+  margin: 30px 0;
+  padding: 10px 0;
+  background-color: var(--warna-5);
+  border-radius: 0.5rem;
+}
+
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+
+}
+
+.tutorial-box {
+  background-color: var(--warna-5);
+  /* Warna biru gelap mirip screenshot */
+  color: var(--warna-2);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.tutorial-box code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--warna-1);
+}
+
+
+
+.page-wrapper {
+  width: 100%;
+  /* Maksimal lebar halaman */
+  margin: 0 auto;
+  /* Memusatkan elemen */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* Jarak antar elemen */
+}
+
+.syntax-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+}
+
+.syntax-box {
+  background-color: var(--warna-2);
+  color: var(--warna-1);
+  padding: 15px;
+  border-radius: 10px;
+  width: 90%;
+  box-shadow: 0 9px 10px rgba(61, 101, 153, 0.371);
+}
+
+
 
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px) {
@@ -718,6 +920,11 @@ footer {
   .project-box {
     width: 80%;
   }
+
+  .tutorial-box {
+    font-size: 14px;
+    padding: 15px;
+  }
 }
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
@@ -738,157 +945,9 @@ footer {
   .input-field {
     width: 100%;
   }
-}
 
-.tutorial-table {
-  margin: 0 30px;
-  padding: 90px 0;
-  overflow-x: auto;
-}
-
-.tutorial-table table {
-  width: 100%;
-  border-collapse: collapse;
-  color: var(--warna-2);
-  text-align: center;
-}
-
-.tutorial-table h2 {
-  font-size: 50px;
-  color: var(--warna-2);
-  text-align: center;
-  margin: 30px 0;
-  padding: 10px 0;
-  background-color: var(--warna-5);
-  border-radius: 0.5rem;
-}
-
-.tutorial-table table th,
-.tutorial-table table td {
-  border: 1px solid white;
-  padding: 8px;
-  text-align: center;
-}
-
-.tutorial-table table th {
-  background-color: var(--warna-5);
-}
-
-.tutorial-table table td {
-  background-color: var(--warna-4);
-}
-
-@media (max-width: 768px) {
-  .tutorial-table table {
-    font-size: 14px;
-    width: 100%;
-  }
-
-  .tutorial-table h2 {
-    font-size: 32px;
-  }
-
-  .tutorial-table table th,
-  .tutorial-table table td {
-    padding: 4px;
-  }
-}
-
-@media (max-width: 480px) {
-  .tutorial-table h2 {
-    font-size: 24px;
-  }
-
-  .tutorial-table table {
+  .tutorial-box {
     font-size: 12px;
+    padding: 10px;
   }
-
-  .tutorial-table table th,
-  .tutorial-table table td {
-    padding: 2px;
-
-  }
-}
-
-
-/* Pengaturan tampilan body agar form berada di tengah halaman */
-.form-login-register {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-/* Pengaturan container form login */
-.login-container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Pengaturan judul form */
-.login-container h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Pengaturan input text dan password */
-.login-container input[type="text"],
-.login-container input[type="password"] {
-  width: 100%;
-  /* Lebar input 100% dari parent container */
-  padding: 10px;
-  /* Padding dalam input */
-  margin: 10px 0;
-  /* Jarak antar input */
-  border: 1px solid #ccc;
-  /* Border abu-abu pada input */
-  border-radius: 4px;
-  /* Membuat sudut input melengkung */
-}
-
-/* Pengaturan tombol submit dan reset */
-.login-container input[type="submit"],
-.login-container input[type="reset"] {
-  width: 48%;
-  /* Lebar tombol menjadi 48% agar dua tombol bisa berada dalam satu baris */
-  padding: 10px;
-  border: none;
-  /* Menghilangkan border default pada tombol */
-  border-radius: 4px;
-  /* Membuat sudut tombol melengkung */
-  background-color: var(--warna-5);
-  /* Warna latar tombol submit hijau */
-  color: var(--warna-2);
-  /* Warna teks tombol putih */
-  cursor: pointer;
-  /* Menampilkan pointer saat tombol di-hover */
-  margin-top: 10px;
-}
-
-/* Pengaturan warna tombol reset (warna merah) */
-.login-container input[type="reset"] {
-  background-color: #f44336;
-}
-
-/* Efek hover saat tombol diklik */
-.login-container input[type="submit"]:hover,
-.login-container input[type="reset"]:hover {
-  opacity: 0.9;
-  /* Mengubah transparansi saat hover */
-  background-color: var(--warna-4);
-}
-
-.sign-up-link {
-  text-align: center;
-  font-size: 15px;
-  margin-top: 20px;
-}
-
-.sign-up-link a {
-  color: #000;
-  font-weight: 600;
 }
