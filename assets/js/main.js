@@ -30,7 +30,7 @@ function headerShadow() {
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["?", "! !", "⚠️⚠️⚠️", "😑😑😑😑"],
+  strings: ["???", "Hallo", "Perkenalkan Saya", "Jonathan Gianivan .s"],
   loop: true,
   typeSpeed: 50,
   backSpeed: 80,

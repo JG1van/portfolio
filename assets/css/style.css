@@ -208,23 +208,27 @@ nav {
 }
 
 .featured-text-card span {
-  background: var(--warna-4);
+  background: var(--warna-5);
   color: var(--warna-2);
-  padding: 3px 8px;
+  padding: 10px 20px;
   font-size: 12px;
   border-radius: 5px;
 }
 
 .featured-name {
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 600;
   color: var(--warna-2);
   margin-block: 20px;
 }
 
+.featured-name i {
+  font-size: 40px;
+}
+
 .typedText {
   text-transform: capitalize;
-  color: var(--warna-2);
+  color: var(--warna-5);
 }
 
 .featured-text-info {
@@ -603,6 +607,22 @@ h4 {
 }
 
 /* ----- CONTACT BOX ----- */
+
+.contact-form {
+  height: 600px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+/* Nonaktifkan efek animasi */
+.visme_d * {
+  animation: none !important;
+  transition: none !important;
+}
+
 .contact-info {
   position: relative;
   display: flex;
@@ -742,12 +762,12 @@ footer {
   margin-top: 10px;
 }
 
-section .bagian-tutorial {
+.bagian-tutorial {
   margin: 0 50px;
   overflow-x: auto;
 }
 
-section .bagian-tutorial h5 {
+.bagian-tutorial h5 {
   font-size: 50px;
   color: var(--warna-2);
   text-align: center;
@@ -775,7 +795,7 @@ section .bagian-tutorial h5 {
 }
 
 .tutorial-box code {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--warna-2);
   padding: 2px 6px;
   border-radius: 4px;
   color: var(--warna-1);
@@ -931,7 +951,7 @@ section .bagian-tutorial h5 {
 
 @media only screen and (max-width: 540px) {
   .featured-name {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .project-box {
