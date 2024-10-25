@@ -259,7 +259,7 @@ nav {
 
 .social_icons {
   display: flex;
-  margin-top: 5em;
+  margin: 10em 0;
   gap: 30px;
 }
 
@@ -952,7 +952,7 @@ footer {
 
 @media only screen and (max-width: 540px) {
   .featured-name {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .project-box,
