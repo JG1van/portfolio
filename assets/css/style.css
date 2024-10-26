@@ -509,7 +509,6 @@ h4 {
 
 .project-box h3 {
   font-size: 20px;
-
   color: var(--warna-5);
   margin-bottom: 5px;
   z-index: 2;
@@ -727,10 +726,8 @@ footer {
   align-items: center;
   flex-direction: column;
   row-gap: 30px;
-
   padding-block: 40px 60px;
   background-color: var(--warna-2);
-
 }
 
 .top-footer p {
@@ -956,6 +953,8 @@ footer {
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
 @media only screen and (max-width: 540px) {
+
+
   .featured-name {
     font-size: 25px;
   }
@@ -980,5 +979,10 @@ footer {
 
   .scroll-btn {
     display: none;
+  }
+
+  footer {
+    width: 105vw;
+
   }
 }
