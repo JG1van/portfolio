@@ -295,6 +295,144 @@
         </div>
       </div>
     </section>
+    <section class="bagian-tutorial">
+      <div class="page-wrapper">
+        <h5 style="width: 100%">Tampilan Kode Canvas</h5>
+        <aside class="coba-tutorial">
+          <h2>Latihan Membuat Fitur Canvas</h2>
+          <p>
+            Latihan ini bertujuan untuk mempraktikkan penggunaan elemen canvas
+            menggunakan HTML dan CSS langsung dari editor.
+          </p>
+          <h3>HTML & CSS Code:</h3>
+          <textarea
+            class="editor"
+            rows="20"
+            id="contentCode"
+            placeholder="Masukkan kode HTML dan CSS di sini"
+          >
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <style>
+:root {
+--warna-1: black;
+--warna-2: white;
+--warna-3: #222831;
+--warna-4: #393E46;
+--warna-5: #00ADB5;
+
+
+/* Shadow and Hover Effects */
+--first-shadow-color: rgba(255,
+    255,
+    255,
+    0.1);
+/* Shadow putih lembut untuk menambah kedalaman */
+--second-shadow-color: rgba(0,
+    0,
+    0,
+    0.7);
+/* Shadow hitam pekat untuk mempertegas elemen visual */
+}       /* Menambahkan flexbox untuk menyelaraskan input dan gambar */
+    .container {
+      padding: 20px 0;
+      margin: 20px 0;
+      display: flex;
+      align-items: center; /* Vertikal sejajar di tengah */
+      gap: 20px; /* Jarak antara elemen */
+      justify-content: center;
+      backdrop-filter: blur(25px) saturate(99%);
+      -webkit-backdrop-filter: blur(25px) saturate(99%);
+      background-color: rgba(255, 255, 255, 0);
+      border-radius: 12px;
+      color: var(--warna-2);
+    }
+
+    /* Style pada gambar dan input file */
+    #gambar {
+      border: 1px solid #d3d3d3;
+    }
+  </style>
+
+  <!-- --------- FAVICON ---------- -->
+  <link
+    rel="shortcut icon"
+    href="assets/images/favicon.png"
+    type="image/x-icon"
+  />
+</head>
+<body>
+
+  <section class="bagian-tutorial">
+    <div class="container">
+      <!-- Kotak Input File dan Gambar Diletakkan dalam Satu Baris -->
+      <div style="padding: 90px 0">
+        <p>Pilih gambar dari perangkat Anda:</p>
+        <input type="file" id="fileInput" accept="image/*" />
+      </div>
+    </div>
+    <div class="container">
+      <img
+        id="gambar"
+        src="../assets/images/5zh1ey.jpg"
+        alt="Gambar tidak tersedia"
+        width="220"
+        height="277"
+      />
+
+      <p>Mengisi :</p>
+      <canvas
+        id="kanvas"
+        width="220"
+        height="277"
+        style="border: 1px solid #d3d3d3"
+      >
+        Your browser does not support the HTML5 canvas tag.</canvas
+      >
+      <div class="featured-text-btn">
+        <button class="btn blue-btn" onclick="kanvas()">Try</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const fileInput = document.getElementById("fileInput");
+    const gambar = document.getElementById("gambar");
+
+    fileInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        gambar.src = e.target.result;
+      };
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    });
+
+    function kanvas() {
+      var c = document.getElementById("kanvas");
+      var ctx = c.getContext("2d");
+      var img = document.getElementById("gambar");
+      ctx.drawImage(img, 0, 0, c.width, c.height);
+    }
+  </script>
+  </body>
+  </html>
+        </textarea
+          >
+
+          <button class="run-button" onclick="runContentCode()">Run</button>
+          <button class="undo-button" onclick="undoContentCode()">Undo</button>
+
+          <h3>Hasil:</h3>
+          <div class="preview" id="previewContent"></div>
+        </aside>
+      </div>
+    </section>
   </body>
 
   <!-- ----- TYPING JS Link ----- -->
@@ -305,4 +443,5 @@
 
   <!-- ----- MAIN JS ----- -->
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/tutorial.js"></script>
 </html>

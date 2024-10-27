@@ -763,10 +763,11 @@ footer {
 .bagian-tutorial {
   margin: 0 50px;
   overflow-x: auto;
+
 }
 
 .bagian-tutorial h5 {
-  font-size: 50px;
+  font-size: 45px;
   color: var(--warna-2);
   text-align: center;
   margin: 30px 0;
@@ -948,12 +949,19 @@ footer {
   .scroll-btn {
     display: none;
   }
+
+  .tutorial-table h5 {
+    font-size: 35px;
+  }
 }
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
 @media only screen and (max-width: 540px) {
 
+  .tutorial-table h5 {
+    font-size: 20px;
+  }
 
   .featured-name {
     font-size: 25px;
@@ -981,4 +989,129 @@ footer {
     display: none;
   }
 
+}
+
+.coba-tutorial {
+  background-color: var(--warna-3);
+  /* Light gray background for the tutorial box */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow */
+  margin: 20px 0;
+  /* Margin between tutorial boxes */
+  padding: 15px;
+  /* Padding inside the tutorial box */
+}
+
+/* Font styles */
+.coba-tutorial h2 {
+  font-size: 24px;
+  /* Larger font size for headings */
+  color: var(--warna-2);
+  /* Darker color for better contrast */
+  margin-bottom: 10px;
+  /* Space below heading */
+}
+
+.coba-tutorial p {
+  font-size: 16px;
+  /* Font size for paragraphs */
+  line-height: 1.5;
+  /* Spacing between lines */
+  color: var(--warna-2);
+  /* Slightly lighter color for text */
+}
+
+.coba-tutorial h3 {
+  font-size: 18px;
+  /* Font size for subheadings */
+  color: var(--warna-2);
+  /* Medium dark color for subheadings */
+  margin-top: 15px;
+  /* Space above subheadings */
+  margin-bottom: 5px;
+  /* Space below subheadings */
+}
+
+.editor {
+  width: 100%;
+  /* Full width for the code editor */
+  height: 200px;
+  /* Set a fixed height for the code editor */
+  padding: 10px;
+  /* Padding inside the textarea */
+  border: 1px solid #aaa;
+  /* Border around the textarea */
+  border-radius: 4px;
+  /* Rounded corners for the textarea */
+  background-color: #1e1e1e;
+  /* Dark background for the code editor */
+  color: #dcdcdc;
+  /* Light gray text color for better contrast */
+  font-family: "Courier New", Courier, monospace;
+  /* Monospace font for code */
+  resize: vertical;
+  /* Allow vertical resizing only */
+}
+
+.preview {
+  margin-top: 10px;
+  /* Space above the preview section */
+  padding: 10px;
+  /* Padding inside the preview area */
+  border: 1px solid #aaa;
+  /* Border around the preview area */
+  background-color: #d9d9d9;
+  /* Light gray background for the preview */
+  color: #333;
+  /* Text color for preview */
+}
+
+/* Style for the Run button */
+.run-button {
+  background-color: var(--warna-5);
+  /* Green background */
+  color: var(--warna-3);
+  /* White text */
+  border: none;
+  /* Remove border */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 10px 20px;
+  /* Padding for the button */
+  font-size: 14px;
+  /* Font size */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+  /* Smooth background change */
+  margin-top: 10px;
+  /* Space above the button */
+  border: 2px solid #ccc;
+}
+
+.undo-button {
+  padding: 10px 20px;
+  background-color: var(--warna-2);
+  color: var(--warna-1);
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.undo-button:hover {
+  background-color: var(--warna-4);
+  border-color: #999;
+  color: var(--warna-2);
+}
+
+
+/* Hover effect for the Run button */
+.run-button:hover {
+  background-color: var(--warna-4);
+  /* Darker green on hover */
+  border-color: #999;
 }

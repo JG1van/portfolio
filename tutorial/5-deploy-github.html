@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Tutorial - GitHub</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/git-hub.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav id="header">
+      <div class="nav-logo">
+        <p class="nav-name">Jonathan G</p>
+        <span>.</span>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+          <li class="nav_list">
+            <a href="../index.html#home" class="nav-link">Home</a>
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="../index.html#about" class="nav-link">About</a>
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="../index.html#projects" class="nav-link">Projects</a>
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="../index.html#tutorial" class="nav-link active-link"
+              >Tutorial</a
+            >
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="../index.html#contact" class="nav-link">Contact</a>
+            <div class="circle"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-button">
+        <button class="btn">
+          Download CV <i class="uil uil-file-alt"></i>
+        </button>
+      </div>
+      <div class="nav-menu-btn">
+        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
+    <section class="bagian-tutorial">
+      <div class="tutorial-section">
+        <h1>Tutorial Upload ke GitHub</h1>
+
+        <div class="step">
+          <h2>Step 1: Buat Repository</h2>
+          <p>
+            Masuk ke akun GitHub Anda, klik "New Repository", masukkan nama
+            repository, lalu klik "Create Repository".
+          </p>
+          <img src="../assets/images/gambar 1.png" alt="Membuat Repository" />
+        </div>
+
+        <div class="step">
+          <h2>Step 2: Buka Terminal di VS Code</h2>
+          <p>
+            Copy perintah yang diberikan di GitHub satu per satu ke terminal di
+            VS Code untuk mulai menghubungkan project Anda ke repository.
+          </p>
+          <img src="../assets/images/gambar 2.png" alt="Membuka Terminal" />
+        </div>
+
+        <div class="step">
+          <h2>Step 3: Inisialisasi Git</h2>
+          <p>
+            Masukkan perintah <code>git init</code> untuk menginisialisasi
+            repository Git pada folder project Anda.
+          </p>
+          <img src="../assets/images/gambar 3.png" alt="Inisialisasi Git" />
+        </div>
+
+        <div class="step">
+          <h2>Step 4: Tambahkan File</h2>
+          <p>
+            Jalankan <code>git add .</code> untuk menambahkan semua file yang
+            ingin Anda upload ke GitHub.
+          </p>
+          <img src="../assets/images/gambar 4.png" alt="Git Add" />
+        </div>
+
+        <div class="step">
+          <h2>Step 5: Commit Perubahan</h2>
+          <p>
+            Gunakan perintah <code>git commit -m "first commit"</code> untuk
+            menyimpan perubahan dengan pesan.
+          </p>
+          <img src="../assets/images/gambar 5.png" alt="Git Commit" />
+        </div>
+
+        <div class="step">
+          <h2>Step 6: Set Branch ke Main</h2>
+          <p>
+            Gunakan <code>git branch -M main</code> untuk mengatur branch utama
+            menjadi "main".
+          </p>
+          <img src="../assets/images/gambar 6.png" alt="Git Branch Main" />
+        </div>
+
+        <div class="step">
+          <h2>Step 7: Tambahkan Repository Remote</h2>
+          <p>
+            Tambahkan repository remote Anda menggunakan
+            <code
+              >git remote add origin
+              https://github.com/JGsss/portofolio.git</code
+            >.
+          </p>
+          <img src="../assets/images/gambar 7.png" alt="Git Remote Add" />
+        </div>
+
+        <div class="step">
+          <h2>Step 8: Push ke Repository</h2>
+          <p>
+            Upload file Anda ke GitHub dengan perintah
+            <code>git push -u origin main</code>.
+          </p>
+          <img src="../assets/images/gambar 8.png" alt="Git Push" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/tutorial.js"></script>
+  </body>
+</html>

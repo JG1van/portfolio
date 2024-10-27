@@ -11,20 +11,9 @@
     text-align: center;
 }
 
-section {
-    margin: 0 50px;
-    overflow-x: auto;
-}
 
-section h2 {
-    font-size: 50px;
-    color: var(--warna-2);
-    text-align: center;
-    margin: 30px 0;
-    padding: 10px 0;
-    background-color: var(--warna-5);
-    border-radius: 0.5rem;
-}
+
+
 
 .tutorial-table table th,
 .tutorial-table table td {
@@ -49,8 +38,8 @@ section h2 {
         width: 100%;
     }
 
-    .tutorial-table h2 {
-        font-size: 32px;
+    .tutorial-table h5 {
+        font-size: 24px;
     }
 
     .tutorial-table table th,
@@ -62,9 +51,7 @@ section h2 {
 }
 
 @media (max-width: 480px) {
-    .tutorial-table h2 {
-        font-size: 24px;
-    }
+
 
     .tutorial-table table {
         font-size: 12px;

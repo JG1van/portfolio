@@ -345,6 +345,294 @@
         </div>
       </div>
     </section>
+    <!-- coba syntax Form -->
+    <section class="bagian-tutorial">
+      <div class="page-wrapper">
+        <h5 style="width: 100%">Tampilan Kode Tabel</h5>
+        <aside class="coba-tutorial">
+          <h2>Latihan Membuat Tabel</h2>
+          <p>
+            Latihan ini bertujuan untuk mempraktikkan pembuatan tabel dan
+            pengaturan tata letak halaman menggunakan HTML dan CSS secara
+            langsung dari editor.
+          </p>
+
+          <h3>HTML & CSS Code:</h3>
+          <textarea
+            class="editor"
+            rows="20"
+            id="contentCode"
+            placeholder="Masukkan kode HTML dan CSS di sini"
+          >
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <style>
+:root {
+--warna-1: black;
+--warna-2: white;
+--warna-3: #222831;
+--warna-4: #393E46;
+--warna-5: #00ADB5;
+
+
+/* Shadow and Hover Effects */
+--first-shadow-color: rgba(255,
+    255,
+    255,
+    0.1);
+/* Shadow putih lembut untuk menambah kedalaman */
+--second-shadow-color: rgba(0,
+    0,
+    0,
+    0.7);
+/* Shadow hitam pekat untuk mempertegas elemen visual */
+}.
+tutorial-table {
+
+padding: 70px 0;
+overflow-x: auto;
+}
+
+.tutorial-table table {
+width: 100%;
+border-collapse: collapse;
+color: var(--warna-2);
+text-align: center;
+}
+
+section {
+margin: 0 50px;
+overflow-x: auto;
+}
+
+section h5 {
+font-size: 45px;
+color: var(--warna-2);
+text-align: center;
+margin: 30px 0;
+padding: 10px 0;
+background-color: var(--warna-5);
+border-radius: 0.5rem;
+}
+
+.tutorial-table table th,
+.tutorial-table table td {
+border: 1px solid white;
+padding: 8px;
+text-align: center;
+}
+
+.tutorial-table table th {
+background-color: var(--warna-5);
+}
+
+.tutorial-table table td {
+background-color: var(--warna-4);
+}
+
+
+
+@media (max-width: 768px) {
+.tutorial-table table {
+  font-size: 14px;
+  width: 100%;
+}
+
+.tutorial-table h5 {
+  font-size: 32px;
+}
+
+.tutorial-table table th,
+.tutorial-table table td {
+  padding: 4px;
+}
+
+
+}
+
+@media (max-width: 480px) {
+.tutorial-table h5 {
+  font-size: 24px;
+}
+
+.tutorial-table table {
+  font-size: 12px;
+}
+
+.tutorial-table table th,
+.tutorial-table table td {
+  padding: 2px;
+
+}
+
+
+}      </style>
+  </head>
+  <body>
+    <section class="bagian-tutorial">
+      <div class="tutorial-table">
+        <table>
+          <!-- Judul tabel -->
+          <h5>Tabel Data Mahasiswa</h5>
+          <!-- Bagian kepala tabel yang berisi judul kolom -->
+          <thead>
+            <tr>
+              <!-- Definisi header kolom menggunakan elemen <th> -->
+              <th>NIM</th>
+              <th>NAME</th>
+              <th>FAKULTAS</th>
+              <th>JURUSAN</th>
+              <th>IPK SEMESTER 1</th>
+              <th>IPK SEMESTER 2</th>
+              <th>IPK SEMESTER 3</th>
+              <th>IPK SEMESTER 4</th>
+              <th>IPK SEMESTER 5</th>
+              <th>IPK SEMESTER 6</th>
+              <th>IPK SEMESTER 7</th>
+              <th>IPK SEMESTER 8</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Baris pertama data mahasiswa -->
+            <tr>
+              <!-- Setiap <td> merepresentasikan satu data dalam tabel -->
+              <td>00001</td>
+              <td>J</td>
+              <td>Sains & Teknologi</td>
+              <td>Sistem Informasi</td>
+              <td>3.50</td>
+              <td>3.55</td>
+              <td>3.60</td>
+              <td>3.65</td>
+              <td>3.70</td>
+              <td>3.75</td>
+              <td>3.80</td>
+              <td>3.85</td>
+            </tr>
+            <!-- Baris kedua data mahasiswa -->
+            <tr>
+              <td>00002</td>
+              <td>0</td>
+              <td>Sains & Teknologi</td>
+              <td>Sistem Informasi</td>
+              <td>3.30</td>
+              <td>3.50</td>
+              <td>3.60</td>
+              <td>3.70</td>
+              <td>3.80</td>
+              <td>3.75</td>
+              <td>3.65</td>
+              <td>3.85</td>
+            </tr>
+            <!-- Baris ketiga data mahasiswa -->
+            <tr>
+              <td>00003</td>
+              <td>N</td>
+              <td>Sains & Teknologi</td>
+              <td>Sistem Informasi</td>
+              <td>3.25</td>
+              <td>3.40</td>
+              <td>3.55</td>
+              <td>3.60</td>
+              <td>3.70</td>
+              <td>3.65</td>
+              <td>3.75</td>
+              <td>3.80</td>
+            </tr>
+            <!-- Baris keempat data mahasiswa -->
+            <tr>
+              <td>00004</td>
+              <td>A</td>
+              <td>Sains & Teknologi</td>
+              <td>Sistem Informasi</td>
+              <td>3.50</td>
+              <td>3.65</td>
+              <td>3.70</td>
+              <td>3.80</td>
+              <td>3.90</td>
+              <td>3.85</td>
+              <td>3.95</td>
+              <td>4.00</td>
+            </tr>
+            <!-- Baris kelima data mahasiswa -->
+            <tr>
+              <td>00005</td>
+              <td>T</td>
+              <td>Sains & Teknologi</td>
+              <td>Sistem Informasi</td>
+              <td>3.35</td>
+              <td>3.50</td>
+              <td>3.60</td>
+              <td>3.65</td>
+              <td>3.35</td>
+              <td>3.50</td>
+              <td>3.60</td>
+              <td>3.65</td>
+            </tr>
+            <!-- Baris keenam data mahasiswa -->
+            <tr>
+              <td>00006</td>
+              <td>H</td>
+              <td>Sains & Teknologi</td>
+              <td>Sistem Informasi</td>
+              <td>3.80</td>
+              <td>3.75</td>
+              <td>3.65</td>
+              <td>3.85</td>
+              <td>3.75</td>
+              <td>3.80</td>
+              <td>3.85</td>
+              <td>3.90</td>
+            </tr>
+            <!-- Baris ketujuh data mahasiswa -->
+            <tr>
+              <td>00007</td>
+              <td>A</td>
+              <td>Sains & Teknologi</td>
+              <td>Sistem Informasi</td>
+              <td>3.30</td>
+              <td>3.50</td>
+              <td>3.60</td>
+              <td>3.70</td>
+              <td>3.80</td>
+              <td>3.75</td>
+              <td>3.65</td>
+              <td>3.85</td>
+            </tr>
+            <!-- Baris kedelapan data mahasiswa -->
+            <tr>
+              <td>00008</td>
+              <td>N</td>
+              <td>Sains & Teknologi</td>
+              <td>Sistem Informasi</td>
+              <td>3.50</td>
+              <td>3.55</td>
+              <td>3.60</td>
+              <td>3.65</td>
+              <td>3.70</td>
+              <td>3.75</td>
+              <td>3.80</td>
+              <td>3.85</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+  </body>
+  </html>
+        </textarea
+          >
+
+          <button class="run-button" onclick="runContentCode()">Run</button>
+          <button class="undo-button" onclick="undoContentCode()">Undo</button>
+
+          <h3>Hasil:</h3>
+          <div class="preview" id="previewContent"></div>
+        </aside>
+      </div>
+    </section>
   </body>
 
   <!-- ----- TYPING JS Link ----- -->
@@ -355,4 +643,5 @@
 
   <!-- ----- MAIN JS ----- -->
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/tutorial.js"></script>
 </html>

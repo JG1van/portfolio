@@ -1,0 +1,57 @@
+/* CSS tambahan untuk tutorial */
+:root {
+    --warna-1: black;
+    --warna-2: white;
+    --warna-3: #222831;
+    --warna-4: #393E46;
+    --warna-5: #00ADB5;
+
+
+    /* Shadow and Hover Effects */
+    --first-shadow-color: rgba(255,
+            255,
+            255,
+            0.1);
+    /* Shadow putih lembut untuk menambah kedalaman */
+    --second-shadow-color: rgba(0,
+            0,
+            0,
+            0.7);
+    /* Shadow hitam pekat untuk mempertegas elemen visual */
+}
+
+
+.tutorial-section {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: var(--warna-3);
+    border-radius: 8px;
+    color: var(--warna-2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+.step img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.step h2 {
+    font-size: 1.2em;
+}
+
+.step p {
+    font-size: 1em;
+}

@@ -245,6 +245,182 @@
         </div>
       </div>
     </section>
+    <!-- coba syntax Form -->
+    <section class="bagian-tutorial">
+      <div class="page-wrapper">
+        <h5 style="width: 100%">Tampilan Kode Formulir Login & Register</h5>
+        <aside class="coba-tutorial">
+          <h2>Latihan Membuat Formulir</h2>
+          <p>
+            Latihan ini bertujuan untuk mempraktikkan pembuatan formulir dan
+            pengaturan tata letak halaman menggunakan HTML dan CSS secara
+            langsung dari editor.
+          </p>
+          <h3>HTML & CSS Code:</h3>
+          <textarea
+            class="editor"
+            rows="20"
+            id="contentCode"
+            placeholder="Masukkan kode HTML dan CSS di sini"
+          >
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+:root {
+--warna-1: black;
+--warna-2: white;
+--warna-3: #222831;
+--warna-4: #393E46;
+--warna-5: #00ADB5;
+
+
+/* Shadow and Hover Effects */
+--first-shadow-color: rgba(255,
+    255,
+    255,
+    0.1);
+/* Shadow putih lembut untuk menambah kedalaman */
+--second-shadow-color: rgba(0,
+    0,
+    0,
+    0.7);
+/* Shadow hitam pekat untuk mempertegas elemen visual */
+}
+/* Pengaturan tampilan body agar form berada di tengah halaman */
+.form-login-register {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  
+}
+
+/* Pengaturan container form login dan register */
+.login-register-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  /* Lebar form seragam untuk login dan register */
+  max-width: 100%;
+}
+
+/* Pengaturan judul form */
+.login-register-container h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.login-register-container p {
+  color : var(--warna-1);
+}
+/* Pengaturan input text dan password */
+.login-register-container input[type="text"],
+.login-register-container input[type="password"],
+.login-register-container input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Pengaturan tombol submit dan reset */
+.login-register-container input[type="submit"],
+.login-register-container input[type="reset"] {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--warna-5);
+  color: var(--warna-2);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Pengaturan warna tombol reset */
+.login-register-container input[type="reset"] {
+  background-color: #f44336;
+}
+
+/* Efek hover pada tombol */
+.login-register-container input[type="submit"]:hover,
+.login-register-container input[type="reset"]:hover {
+  opacity: 0.9;
+  background-color: var(--warna-4);
+}
+
+/* Pengaturan link untuk sign-up dan sign-in */
+.sign-up-link {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.sign-up-link a {
+  color: #000;
+  font-weight: 600;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Form Login -->
+  <div class="form-login-register">
+    <div class="login-register-container">
+      <h1>Login</h1>
+      <form action="" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <div class="sign-up-link">
+          <p>Don't have an account? <a href="#">Sign Up</a></p>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+          <input type="submit" value="Login" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Form  Register -->
+  <div class="form-login-register">
+    <div class="login-register-container">
+      <h1>Register</h1>
+      <form action="" method="POST">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required />
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <div class="sign-up-link">
+          <p>Already have an Account? <a href="#">Sign In</a></p>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+          <input type="submit" value="register" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+      </textarea
+          >
+
+          <button class="run-button" onclick="runContentCode()">Run</button>
+          <button class="undo-button" onclick="undoContentCode()">Undo</button>
+
+          <h3>Hasil:</h3>
+          <div class="preview" id="previewContent"></div>
+        </aside>
+      </div>
+    </section>
   </body>
 
   <!-- ----- TYPING JS Link ----- -->
@@ -255,4 +431,5 @@
 
   <!-- ----- MAIN JS ----- -->
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/tutorial.js"></script>
 </html>
