@@ -1198,6 +1198,8 @@ footer {
   border-radius: 0 10px 10px 0;
   perspective: 1500px;
   /* Tambahkan perspektif agar elemen di dalam tampak 3D */
+  border: var(--warna-1) 0.5px solid;
+
 }
 
 .cover {
@@ -1218,12 +1220,14 @@ footer {
   justify-content: center;
   backface-visibility: hidden;
   /* Agar sisi belakang tidak terlihat */
-  border: var(--warna-1) 2.5px solid;
+
   transform-style: preserve-3d;
   /* Pastikan transformasi dipertahankan dalam 3D */
+  border: var(--warna-1) 1.5px solid;
 }
 
 .cover h2,
+.book h2,
 .cover h3 {
   font-weight: bold;
   color: var(--warna-2);
@@ -1231,7 +1235,8 @@ footer {
   text-align: center;
 }
 
-.cover h2 {
+.cover h2,
+.book h2 {
   font-size: 40px;
 }
 
@@ -1241,14 +1246,45 @@ footer {
 
 /* Efek hover agar sampul buku terbuka dalam tampilan 3D */
 .book:hover .cover {
-  transform: rotateY(-76.5deg);
+  transform: rotateY(-77deg);
   /* Rotasi sumbu Y lebih 3D */
 }
 
 .book p {
-  text-align: center;
-  font-size: 1.1rem;
+  text-align: left;
+  font-size: 1rem;
   color: var(--warna-2);
-  padding: 10px 35px;
-  line-height: 1.5;
+  padding: 5px 10px 15px 40px;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 540px) {
+  .book {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .cover {
+    border-radius: 0;
+  }
+
+  .book p {
+    padding: 5px 10px 15px 10px;
+  }
+
+  .cover h2,
+  .book h2 {
+    font-size: 30px;
+  }
+
+  .cover h3 {
+    font-size: 15px;
+  }
+
+  .book p {
+    font-size: 0.9rem;
+    padding: 2.5px 5px 7.5px 35px;
+  }
+
 }
