@@ -392,117 +392,201 @@
     <section class="bagian-tutorial">
       <h5>Tampilan Syntax Lokasi Geolocation API</h5>
       <div class="syntax-container">
-        <div class="syntax-box">
-          <code>
-            &lt;div class=&quot;loc&quot;&gt; <br />
-            &nbsp;&nbsp;&lt;div class=&quot;loc-container&quot;&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Get User Location with Geolocation
-            API&lt;/h1&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;button
-            onclick=&quot;getLocation()&quot;&gt;Get Location&lt;/button&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;location&quot;&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Your
-            Location:&lt;/h3&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Latitude: &lt;span
-            id=&quot;latitude&quot;&gt;&lt;/span&gt;&lt;/p&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Longitude: &lt;span
-            id=&quot;longitude&quot;&gt;&lt;/span&gt;&lt;/p&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Accuracy: &lt;span
-            id=&quot;accuracy&quot;&gt;&lt;/span&gt; meters&lt;/p&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; <br />
-            &nbsp;&nbsp;&lt;/div&gt; <br />
-            &lt;/section&gt; <br />
-          </code>
-        </div>
-      </div>
-      <div class="syntax-container">
-        <div class="syntax-box">
-          <code>
-            &lt;script&gt; <br />
-            &nbsp;&nbsp;// Fungsi untuk mendapatkan lokasi pengguna <br />
-            &nbsp;&nbsp;function getLocation() { <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;const locationBox =
-            document.getElementById(&quot;location&quot;); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;if (navigator.geolocation) { <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;navigator.geolocation.getCurrentPosition(showPosition,
-            showError); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;} else { <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(&quot;Geolocation is not
-            supported by this browser.&quot;); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;} <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;// Tambahkan efek loading pada tombol <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;const button =
-            document.querySelector(&quot;button&quot;); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;button.innerHTML = &quot;Getting
-            Location...&quot;; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;button.disabled = true; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;button.style.backgroundColor =
-            &quot;#ccc&quot;; <br />
-            &nbsp;&nbsp;} <br />
-            <br />
-            &nbsp;&nbsp;// Fungsi untuk menampilkan posisi <br />
-            &nbsp;&nbsp;function showPosition(position) { <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&quot;latitude&quot;).innerHTML
-            = position.coords.latitude; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&quot;longitude&quot;).innerHTML
-            = position.coords.longitude; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&quot;accuracy&quot;).innerHTML
-            = position.coords.accuracy + &quot; meters&quot;; <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;// Tampilkan div lokasi <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;const locationBox =
-            document.getElementById(&quot;location&quot;); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;locationBox.style.display =
-            &quot;block&quot;; <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;// Kembalikan status tombol <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;const button =
-            document.querySelector(&quot;button&quot;); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;button.innerHTML = &quot;Get Location&quot;;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;button.disabled = false; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;button.style.backgroundColor =
-            &quot;#007bff&quot;; <br />
-            &nbsp;&nbsp;} <br />
-            <br />
-            &nbsp;&nbsp;// Fungsi untuk menangani kesalahan <br />
-            &nbsp;&nbsp;function showError(error) { <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;switch (error.code) { <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case error.PERMISSION_DENIED:
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(&quot;User
-            denied the request for Geolocation.&quot;); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case error.POSITION_UNAVAILABLE:
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(&quot;Location
-            information is unavailable.&quot;); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case error.TIMEOUT: <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(&quot;The
-            request to get user location timed out.&quot;); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case error.UNKNOWN_ERROR: <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(&quot;An
-            unknown error occurred.&quot;); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;} <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;// Kembalikan status tombol meskipun ada
-            kesalahan <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;const button =
-            document.querySelector(&quot;button&quot;); <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;button.innerHTML = &quot;Get Location&quot;;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;button.disabled = false; <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;button.style.backgroundColor =
-            &quot;#007bff&quot;; <br />
-            &nbsp;&nbsp;} <br />
-            &lt;/script&gt; <br />
-          </code>
+        <div class="card">
+          <div class="header">
+            <div class="top">
+              <div class="circle">
+                <span class="red circle2"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow circle2"></span>
+              </div>
+              <div class="circle">
+                <span class="green circle2"></span>
+              </div>
+            </div>
+          </div>
+          <div class="code-container">
+            <textarea class="area" id="code" name="code" readonly="">
+              <!DOCTYPE html>
+              <html>
+              <head>
+                <style>
+            :root {
+            --warna-1: black;
+            --warna-2: white;
+            --warna-3: #222831;
+            --warna-4: #393E46;
+            --warna-5: #00ADB5;
+            
+            
+            /* Shadow and Hover Effects */
+            --first-shadow-color: rgba(255,
+                255,
+                255,
+                0.1);
+            /* Shadow putih lembut untuk menambah kedalaman */
+            --second-shadow-color: rgba(0,
+                0,
+                0,
+                0.7);
+            /* Shadow hitam pekat untuk mempertegas elemen visual */
+            }     /* Body styling */
+                .loc {
+                  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100vh;
+                }
+            
+                /* Container for content */
+                .loc-container {
+                  margin: 0 30px;
+                  padding: 90px 0;
+                  text-align: center;
+                  background-color: #ffffff;
+                  border-radius: 15px;
+                  padding: 40px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  max-width: 500px;
+                  width: 100%;
+                }
+            
+                .loc h1 {
+                  font-size: 24px;
+                  color: #333;
+                  margin-bottom: 20px;
+                }
+            
+                /* Stylish button */
+                .loc button {
+                  background-color: #007bff;
+                  color: #fff;
+                  border: none;
+                  padding: 15px 30px;
+                  border-radius: 25px;
+                  font-size: 16px;
+                  cursor: pointer;
+                  transition: background-color 0.3s ease;
+                }
+            
+                .loc button:hover {
+                  background-color: #0056b3;
+                }
+            
+                /* Location result box */
+                #location {
+                  margin-top: 20px;
+                  padding: 20px;
+                  border-radius: 15px;
+                  background-color: #e9f7f9;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+                  display: none;
+                }
+            
+                .loc h3 {
+                  margin-bottom: 10px;
+                  font-size: 20px;
+                  color: #007bff;
+                }
+            
+                .loc p {
+                  font-size: 16px;
+                  color: #555;
+                  margin: 5px 0;
+                }
+              </style>
+            </head>
+            
+            <body>
+              <!-- --------------- HEADER --------------- -->
+             
+            
+              <section class="bagian-tutorial">
+                <div class="loc">
+                  <div class="loc-container">
+                    <h1>Get User Location with Geolocation API</h1>
+                    <button onclick="getLocation()">Get Location</button>
+            
+                    <div id="location">
+                      <h3>Your Location:</h3>
+                      <p>Latitude: <span id="latitude"></span></p>
+                      <p>Longitude: <span id="longitude"></span></p>
+                      <p>Accuracy: <span id="accuracy"></span> meters</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            
+              <script>
+                // Function to get user location
+                function getLocation() {
+                  const locationBox = document.getElementById("location");
+                  if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
+                  } else {
+                    alert("Geolocation is not supported by this browser.");
+                  }
+            
+                  // Add loading effect to the button
+                  const button = document.querySelector("button");
+                  button.innerHTML = "Getting Location...";
+                  button.disabled = true;
+                  button.style.backgroundColor = "#ccc";
+                }
+            
+                // Function to display position
+                function showPosition(position) {
+                  document.getElementById("latitude").innerHTML =
+                    position.coords.latitude;
+                  document.getElementById("longitude").innerHTML =
+                    position.coords.longitude;
+                  document.getElementById("accuracy").innerHTML =
+                    position.coords.accuracy + " meters";
+            
+                  // Show the location div
+                  const locationBox = document.getElementById("location");
+                  locationBox.style.display = "block";
+            
+                  // Revert button state
+                  const button = document.querySelector("button");
+                  button.innerHTML = "Get Location";
+                  button.disabled = false;
+                  button.style.backgroundColor = "#007bff";
+                }
+            
+                // Function to handle errors
+                function showError(error) {
+                  switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                      alert("User denied the request for Geolocation.");
+                      break;
+                    case error.POSITION_UNAVAILABLE:
+                      alert("Location information is unavailable.");
+                      break;
+                    case error.TIMEOUT:
+                      alert("The request to get user location timed out.");
+                      break;
+                    case error.UNKNOWN_ERROR:
+                      alert("An unknown error occurred.");
+                      break;
+                  }
+            
+                  // Revert button state even in case of an error
+                  const button = document.querySelector("button");
+                  button.innerHTML = "Get Location";
+                  button.disabled = false;
+                  button.style.backgroundColor = "#007bff";
+                }
+              </script>
+              
+              </body>
+              </html></textarea
+            >
+          </div>
         </div>
       </div>
     </section>

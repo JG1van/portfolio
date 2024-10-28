@@ -1,6 +1,3 @@
-/* ----- POPPINS FONT Link ----- */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
 /* ----- VARIABLES ----- */
 :root {
   --warna-1: black;
@@ -28,7 +25,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 
 }
 
@@ -823,14 +820,7 @@ footer {
 
 }
 
-.syntax-box {
-  background-color: var(--warna-2);
-  color: var(--warna-1);
-  padding: 15px;
-  border-radius: 10px;
-  width: 90%;
-  box-shadow: 0 9px 10px rgba(61, 101, 153, 0.371);
-}
+
 
 
 
@@ -1114,4 +1104,151 @@ footer {
   background-color: var(--warna-4);
   /* Darker green on hover */
   border-color: #999;
+}
+
+
+/* From Uiverse.io by Bastiennnn */
+.card {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  background-color: var(--warna-3);
+  border-radius: 8px;
+  z-index: 1;
+  box-shadow: 0px 10px 10px var(--first-shadow-color);
+  transition: 0.5s;
+}
+
+
+
+.top {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.circle {
+  padding: 0 4px;
+}
+
+.circle2 {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 5px;
+}
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+
+.header {
+  margin: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+#title2 {
+  color: white;
+  padding-left: 50px;
+  font-size: 15px;
+}
+
+.code-container {
+  text-align: center;
+}
+
+#code {
+  width: 95%;
+  height: 350px;
+  resize: none;
+  background-color: var(--warna-4);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 10px;
+}
+
+#code:focus {
+  outline: none !important;
+}
+
+/* Container buku dengan perspektif 3D */
+.book {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-block: 30px 70px;
+  padding-inline: 20px;
+  width: 100%;
+  height: auto;
+  background: var(--warna-5);
+  border-radius: 0 10px 10px 0;
+  perspective: 1500px;
+  /* Tambahkan perspektif agar elemen di dalam tampak 3D */
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  background: var(--warna-5);
+  width: 100%;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+  /* Fokus rotasi di sebelah kiri */
+  box-shadow: 0px 10px 15px var(--first-shadow-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  /* Agar sisi belakang tidak terlihat */
+  border: var(--warna-1) 2.5px solid;
+  transform-style: preserve-3d;
+  /* Pastikan transformasi dipertahankan dalam 3D */
+}
+
+.cover h2,
+.cover h3 {
+  font-weight: bold;
+  color: var(--warna-2);
+  margin: 10px 0;
+  text-align: center;
+}
+
+.cover h2 {
+  font-size: 40px;
+}
+
+.cover h3 {
+  font-size: 20px;
+}
+
+/* Efek hover agar sampul buku terbuka dalam tampilan 3D */
+.book:hover .cover {
+  transform: rotateY(-76.5deg);
+  /* Rotasi sumbu Y lebih 3D */
+}
+
+.book p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--warna-2);
+  padding: 10px 35px;
+  line-height: 1.5;
 }

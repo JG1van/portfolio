@@ -231,66 +231,135 @@
       <h5>Tampilan Syntax canvas</h5>
       <div class="page-wrapper">
         <div class="syntax-container">
-          <div class="syntax-box">
-            <code>
-              &lt;!DOCTYPE html&gt; <br />
-              &lt;html&gt; <br />
-              &nbsp;&nbsp;&lt;body&gt; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Pilih gambar dari perangkat
-              Anda:&lt;/p&gt; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;file&quot;
-              id=&quot;fileInput&quot; accept=&quot;image/*&quot; /&gt;<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;img <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;gambar&quot; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src=&quot;&quot; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt=&quot;Gambar tidak
-              tersedia&quot; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width=&quot;220&quot; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height=&quot;277&quot; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&gt;&lt;/img&gt; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Mengisi :&lt;/p&gt; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;canvas <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;kanvas&quot; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width=&quot;220&quot; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height=&quot;277&quot; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style=&quot;border: 1px solid
-              #d3d3d3&quot;&gt; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your browser does not support
-              the HTML5 canvas tag.&lt;/canvas&gt; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;button
-              onclick=&quot;kanvas()&quot;&gt;Try&lt;/button&gt;&lt;/p&gt;
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fileInput =
-              document.getElementById(&quot;fileInput&quot;); <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var img =
-              document.getElementById(&quot;gambar&quot;); <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileInput.addEventListener(&quot;change&quot;,
-              function(event) { <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var reader = new
-              FileReader(); <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.onload =
-              function(e) { <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img.src
-              = e.target.result; <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reader.readAsDataURL(event.target.files[0]);
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}); <br /><br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function kanvas() { <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var c =
-              document.getElementById(&quot;kanvas&quot;); <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var ctx =
-              c.getContext(&quot;2d&quot;); <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctx.clearRect(0,
-              0, c.width, c.height); <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctx.drawImage(img,
-              0, 0, c.width, c.height); <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br />
-              &nbsp;&nbsp;&lt;/script&gt; <br />
-              &nbsp;&nbsp;&lt;/body&gt; <br />
-              &lt;/html&gt;
-            </code>
+          <div class="card">
+            <div class="header">
+              <div class="top">
+                <div class="circle">
+                  <span class="red circle2"></span>
+                </div>
+                <div class="circle">
+                  <span class="yellow circle2"></span>
+                </div>
+                <div class="circle">
+                  <span class="green circle2"></span>
+                </div>
+              </div>
+            </div>
+            <div class="code-container">
+              <textarea class="area" id="code" name="code" readonly="">
+                <!DOCTYPE html>
+                <html>
+                <head>
+                  <style>
+              :root {
+              --warna-1: black;
+              --warna-2: white;
+              --warna-3: #222831;
+              --warna-4: #393E46;
+              --warna-5: #00ADB5;
+              
+              
+              /* Shadow and Hover Effects */
+              --first-shadow-color: rgba(255,
+                  255,
+                  255,
+                  0.1);
+              /* Shadow putih lembut untuk menambah kedalaman */
+              --second-shadow-color: rgba(0,
+                  0,
+                  0,
+                  0.7);
+              /* Shadow hitam pekat untuk mempertegas elemen visual */
+              }       /* Menambahkan flexbox untuk menyelaraskan input dan gambar */
+                  .container {
+                    padding: 20px 0;
+                    margin: 20px 0;
+                    display: flex;
+                    align-items: center; /* Vertikal sejajar di tengah */
+                    gap: 20px; /* Jarak antara elemen */
+                    justify-content: center;
+                    backdrop-filter: blur(25px) saturate(99%);
+                    -webkit-backdrop-filter: blur(25px) saturate(99%);
+                    background-color: rgba(255, 255, 255, 0);
+                    border-radius: 12px;
+                    color: var(--warna-2);
+                  }
+              
+                  /* Style pada gambar dan input file */
+                  #gambar {
+                    border: 1px solid #d3d3d3;
+                  }
+                </style>
+              
+                <!-- --------- FAVICON ---------- -->
+                <link
+                  rel="shortcut icon"
+                  href="assets/images/favicon.png"
+                  type="image/x-icon"
+                />
+              </head>
+              <body>
+              
+                <section class="bagian-tutorial">
+                  <div class="container">
+                    <!-- Kotak Input File dan Gambar Diletakkan dalam Satu Baris -->
+                    <div style="padding: 90px 0">
+                      <p>Pilih gambar dari perangkat Anda:</p>
+                      <input type="file" id="fileInput" accept="image/*" />
+                    </div>
+                  </div>
+                  <div class="container">
+                    <img
+                      id="gambar"
+                      src="../assets/images/5zh1ey.jpg"
+                      alt="Gambar tidak tersedia"
+                      width="220"
+                      height="277"
+                    />
+              
+                    <p>Mengisi :</p>
+                    <canvas
+                      id="kanvas"
+                      width="220"
+                      height="277"
+                      style="border: 1px solid #d3d3d3"
+                    >
+                      Your browser does not support the HTML5 canvas tag.</canvas
+                    >
+                    <div class="featured-text-btn">
+                      <button class="btn blue-btn" onclick="kanvas()">Try</button>
+                    </div>
+                  </div>
+                </section>
+              
+                <script>
+                  const fileInput = document.getElementById("fileInput");
+                  const gambar = document.getElementById("gambar");
+              
+                  fileInput.addEventListener("change", (event) => {
+                    const file = event.target.files[0];
+                    const reader = new FileReader();
+              
+                    reader.onload = function (e) {
+                      gambar.src = e.target.result;
+                    };
+              
+                    if (file) {
+                      reader.readAsDataURL(file);
+                    }
+                  });
+              
+                  function kanvas() {
+                    var c = document.getElementById("kanvas");
+                    var ctx = c.getContext("2d");
+                    var img = document.getElementById("gambar");
+                    ctx.drawImage(img, 0, 0, c.width, c.height);
+                  }
+                </script>
+                </body>
+                </html></textarea
+              >
+            </div>
           </div>
         </div>
       </div>
