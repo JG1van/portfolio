@@ -69,7 +69,7 @@ const srLeft = ScrollReveal({
   reset: true,
 });
 
-srLeft.reveal(".about-info", { delay: 100 });
+srLeft.reveal(".book", { delay: 100 });
 srLeft.reveal(".contact-info", { delay: 100 });
 
 /* -- ABOUT SKILLS & FORM BOX -- */
