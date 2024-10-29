@@ -729,6 +729,7 @@ footer {
   row-gap: 30px;
   padding-block: 40px 60px;
   background-color: var(--warna-2);
+
 }
 
 .top-footer p {
@@ -953,12 +954,14 @@ footer {
 
 @media only screen and (max-width: 540px) {
 
+
   .tutorial-table h5 {
     font-size: 20px;
   }
 
   .featured-name {
-    font-size: 25px;
+    font-size: 20px;
+
   }
 
   .project-box,
@@ -982,6 +985,18 @@ footer {
   .scroll-btn {
     display: none;
   }
+
+
+
+  .footer p {
+    font-size: 12px;
+  }
+
+  .footer_menu_list a {
+    font-weight: 10;
+    margin-inline: 10px;
+  }
+
 
 }
 
@@ -1265,35 +1280,24 @@ footer {
 /* Responsif untuk layar kecil */
 @media only screen and (max-width: 540px) {
   .book {
-    padding-block: 20px 50px;
-    padding-inline: 15px;
-    width: 90%;
-    height: 50%;
-    perspective: 1500px;
-
+    padding-block: 20px;
+    /* Mengurangi padding vertikal */
+    padding-inline: 10px;
+    /* Mengurangi padding horizontal */
+    margin: auto 0;
   }
 
   .cover {
-    width: 100%;
-    height: 100%;
-    /* Pastikan cover mengikuti tinggi .book */
-    border-radius: 8px;
-    box-shadow: 0px 8px 12px var(--first-shadow-color);
-    transition: transform 0.4s ease-in-out;
-
+    display: none;
   }
 
   .cover h2,
   .book h2 {
-    font-size: 26px;
-  }
-
-  .cover h3 {
-    font-size: 12px;
+    font-size: 20px;
   }
 
   .book p {
-    font-size: 0.75rem;
-    padding: 5px 8px 10px 30px;
+    font-size: 0.7rem;
+    padding: 5px 8px;
   }
 }
