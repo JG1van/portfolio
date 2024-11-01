@@ -63,7 +63,7 @@ html {
   color: #000000 !important;
   font-size: 18px;
 
-  box-shadow: 1px 1px 10px #FFFFFF;
+
   padding: 10px 40px;
   border-radius: 10px;
   border: 1px solid var(--warna-5);
@@ -78,6 +78,7 @@ html {
   color: var(--warna-2) !important;
   background: var(--warna-5);
   background: linear-gradient(to top, #7CACDE, #00ADB5);
+  box-shadow: 1px 1px 10px #FFFFFF;
 }
 
 
@@ -469,7 +470,7 @@ h4 {
   width: 30%;
   height: 250px;
   border-radius: 20px;
-  box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+  background-color: var(--warna-2);
   overflow: hidden;
   transition: 0.4s;
 
@@ -485,6 +486,7 @@ h4 {
   transition: all 0.2s linear;
   z-index: 0;
   /* Pastikan ini berada di belakang konten utama */
+
 }
 
 .project-box::after {
@@ -547,7 +549,7 @@ h4 {
 
 .project-box:hover {
   z-index: 5;
-  background-color: var(--warna-2);
+  box-shadow: 1px 1px 25px #FFFFFF;
 }
 
 .project-box:hover::after {
@@ -1238,6 +1240,7 @@ footer {
   border-radius: 10px;
   perspective: 2000px;
   border: var(--warna-1) 0.5px solid;
+
 }
 
 .cover {
@@ -1288,6 +1291,7 @@ footer {
 .book:hover .cover {
   transform: rotateY(-80deg);
   /* Rotasi sumbu Y lebih 3D */
+  box-shadow: 1px 1px 10px #FFFFFF;
 }
 
 .book p {
