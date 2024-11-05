@@ -1321,6 +1321,7 @@ footer {
     padding-inline: 10px;
     /* Mengurangi padding horizontal */
     margin: auto 0;
+    box-shadow: 1px 1px 5px #FFFFFF;
   }
 
   .cover {

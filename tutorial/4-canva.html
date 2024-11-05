@@ -86,14 +86,7 @@
     </nav>
 
     <section class="bagian-tutorial">
-      <div class="container">
-        <!-- Kotak Input File dan Gambar Diletakkan dalam Satu Baris -->
-        <div style="padding: 90px 0">
-          <p>Pilih gambar dari perangkat Anda:</p>
-          <input type="file" id="fileInput" accept="image/*" />
-        </div>
-      </div>
-      <div class="container">
+      <div class="container" style="padding: 90px 0">
         <img
           id="gambar"
           src="../assets/images/5zh1ey.jpg"
@@ -304,14 +297,8 @@
               <body>
               
                 <section class="bagian-tutorial">
-                  <div class="container">
-                    <!-- Kotak Input File dan Gambar Diletakkan dalam Satu Baris -->
-                    <div style="padding: 90px 0">
-                      <p>Pilih gambar dari perangkat Anda:</p>
-                      <input type="file" id="fileInput" accept="image/*" />
-                    </div>
-                  </div>
-                  <div class="container">
+               
+                  <div class="container" style="padding: 90px 0">
                     <img
                       id="gambar"
                       src="../assets/images/5zh1ey.jpg"
@@ -406,7 +393,9 @@
     0,
     0.7);
 /* Shadow hitam pekat untuk mempertegas elemen visual */
-}       /* Menambahkan flexbox untuk menyelaraskan input dan gambar */
+}       
+
+/* Menambahkan flexbox untuk menyelaraskan input dan gambar */
     .container {
       padding: 20px 0;
       margin: 20px 0;
@@ -414,9 +403,10 @@
       align-items: center; /* Vertikal sejajar di tengah */
       gap: 20px; /* Jarak antara elemen */
       justify-content: center;
-      backdrop-filter: blur(25px) saturate(99%);
+      /* backdrop-filter: blur(25px) saturate(99%);
       -webkit-backdrop-filter: blur(25px) saturate(99%);
-      background-color: rgba(255, 255, 255, 0);
+      background-color: rgba(255, 255, 255, 0); */
+      background-color: var(--warna-1)  ;
       border-radius: 12px;
       color: var(--warna-2);
     }
